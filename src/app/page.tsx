@@ -1,4 +1,4 @@
-import Jokes from "./jokes";
+import Jokes from "@/components/custom/jokes/jokes";
 
 export default function Home() {
   return (

@@ -1,9 +1,9 @@
 import React from 'react'
-import { TJoke, SHORT, MEDIUM } from './results';
+import { Card } from '@/components/ui/card';
 import { capitalizeFirstLetter, highlightMatchedWord } from '@/lib/string-helpers';
 import { Separator } from '@radix-ui/react-separator';
 import parse from 'html-react-parser';
-import { Card } from '../ui/card';
+import { MEDIUM, SHORT, TJoke } from './results';
 
 type TJokesGroup = {
   group: 'short' | 'medium' | 'long';
