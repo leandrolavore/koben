@@ -8,11 +8,13 @@ import { MEDIUM, SHORT, TJoke } from './results';
 type TJokesGroup = {
   group: 'short' | 'medium' | 'long';
   jokes: TJoke[]
+  word: string;
 };
 
 const JokesGroup = ({
   group,
-  jokes
+  jokes,
+  word
 }: TJokesGroup) => {
   let description = '';
 
@@ -30,14 +32,13 @@ const JokesGroup = ({
       <div className="
         overflow-y-auto
         max-h-[20vh]
-        sm:max-h-[10vh]
-        md:max-h-[12vh]
-        lg:max-h-[15vh]
+        md:max-h-[10vh]
+        lg:max-h-[12vh]
       ">
         {jokes?.length ? jokes.map((j) => (
           <div key={j.id} className="flex flex-col my-2">
-            <p className="text-gray-700 italic">
-              {parse(highlightMatchedWord({ word: "dog", text: j.joke }))}
+            <p className="text-gray-700 italic text-sm">
+              - {parse(highlightMatchedWord({ word, text: j.joke }))}
             </p>
             <Separator />
           </div>

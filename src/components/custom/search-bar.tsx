@@ -16,9 +16,16 @@ const SearchBar = ({
   isLoading,
   submit
 }: TSearchBar) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      submit();
+    }
+  };
+
   return (
     <div className="flex w-full max-w-sm items-center space-x-2">
-      <Input value={value} onChange={(e) => setValue(e.target.value)} />
+      <Input value={value} onChange={(e) => setValue(e.target.value)} onKeyDown={handleKeyDown} />
       <Button type="submit" onClick={submit} disabled={!value}>
         Search
         {isLoading ? <Spinner /> : <></>}
