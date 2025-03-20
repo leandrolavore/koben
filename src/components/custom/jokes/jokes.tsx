@@ -56,7 +56,7 @@ const Jokes = () => {
     <Card className="md:min-w-[820px] max-w-[1024px] md:max-h-[90vh] lg:max-h-screen">
       <CardHeader>
         <CardTitle className="text-2xl md:text-4xl">Get your Dad Jokes 😆</CardTitle>
-        <CardDescription>Search for a dad joke or press random and get one random dad joke.</CardDescription>
+        <CardDescription>Search for a dad joke using a keyword or press random and get one random dad joke.</CardDescription>
       </CardHeader>
       <CardContent>
         <div className='flex flex-col gap-8'>

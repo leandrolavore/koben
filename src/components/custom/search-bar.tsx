@@ -25,7 +25,12 @@ const SearchBar = ({
 
   return (
     <div className="flex w-full max-w-sm items-center space-x-2">
-      <Input value={value} onChange={(e) => setValue(e.target.value)} onKeyDown={handleKeyDown} />
+      <Input
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        onKeyDown={handleKeyDown}
+        placeholder='Enter a keyword'
+      />
       <Button type="submit" onClick={submit} disabled={!value}>
         Search
         {isLoading ? <Spinner /> : <></>}
