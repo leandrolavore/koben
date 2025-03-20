@@ -21,9 +21,9 @@ const JokesGroup = ({
   if (group === 'short') {
     description = `under ${SHORT} words`;
   } else if (group === 'medium') {
-    description = `between ${SHORT} and ${MEDIUM} words`;
+    description = `between ${SHORT} and ${MEDIUM - 1} words`;
   } else if (group === 'long') {
-    description = `over ${MEDIUM} words`;
+    description = `${MEDIUM} words and over`;
   }
 
   return (
